@@ -312,10 +312,6 @@ h6 {
 /* Footer */
 
 #main-footer {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  width: 100%;
   text-align: center;
   background: var(--primary-color);
   color: #fff;
