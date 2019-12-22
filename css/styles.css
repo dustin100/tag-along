@@ -142,7 +142,9 @@ h6 {
 }
 
 /*Top Nav  */
-
+#main-nav input {
+  display: none;
+}
 #main-nav {
   background: var(--primary-color);
   position: sticky;
@@ -208,7 +210,6 @@ h6 {
 
 #showcase .showcase-content {
   z-index: 1;
-  background-color: var(--secoundry-color-trans);
   padding: 1rem;
   border-radius: 10px;
   text-align: center;
@@ -311,6 +312,10 @@ h6 {
 /* Footer */
 
 #main-footer {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
   text-align: center;
   background: var(--primary-color);
   color: #fff;
@@ -341,7 +346,6 @@ h6 {
   margin: 0;
   position: relative;
   text-shadow: 0 1px white;
-  z-index: 600;
 }
 
 .quote-wrapper blockquote * {
