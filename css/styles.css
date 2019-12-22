@@ -224,11 +224,6 @@ h6 {
   margin-bottom: 1rem;
 }
 
-#showcase .showcase-content .btn:hover {
-  background: #fff;
-  color: var(--dark-color);
-}
-
 #home-info {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
