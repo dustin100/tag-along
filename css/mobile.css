@@ -1,156 +1,206 @@
 #main-nav input {
-  display: block;
+	display: block;
 }
 #main-nav .wrapper {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 1;
-  background: var(--primary-color);
-  width: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 1;
+	background: var(--primary-color);
+	width: 100%;
 }
 
 #main-nav .wrapper .toggler {
-  position: absolute;
-  top: 0;
-  right: 0;
-  z-index: 4;
-  cursor: pointer;
-  width: 50px;
-  height: 50px;
-  opacity: 0;
+	position: absolute;
+	top: 0;
+	right: 0;
+	z-index: 4;
+	cursor: pointer;
+	width: 50px;
+	height: 50px;
+	opacity: 0;
 }
 
 #main-nav .wrapper .hamburger {
-  position: absolute;
-  top: 0;
-  right: 0;
-  z-index: 1;
-  width: 60px;
-  height: 60px;
-  padding: 1rem;
-  background: var(--primary-color);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+	position: absolute;
+	top: 0;
+	right: 0;
+	z-index: 1;
+	width: 60px;
+	height: 60px;
+	padding: 1rem;
+	background: var(--primary-color);
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
 }
 
 /* Hamburger Middle Line */
 #main-nav .wrapper .hamburger div {
-  position: relative;
-  flex: none;
-  width: 100%;
-  height: 2px;
-  background: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.4s ease;
+	position: relative;
+	-webkit-box-flex: 0;
+	-ms-flex: none;
+	flex: none;
+	width: 100%;
+	height: 2px;
+	background: #fff;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	-webkit-transition: all 0.4s ease;
+	-o-transition: all 0.4s ease;
+	transition: all 0.4s ease;
 }
 
 /* Hamburger Middle Line */
 #main-nav .wrapper .hamburger div:before,
 #main-nav .wrapper .hamburger div:after {
-  content: '';
-  position: absolute;
-  z-index: 1;
-  top: -10px;
-  width: 100%;
-  height: 2px;
-  background: inherit;
+	content: '';
+	position: absolute;
+	z-index: 1;
+	top: -10px;
+	width: 100%;
+	height: 2px;
+	background: inherit;
 }
 
 #main-nav .wrapper .hamburger div:after {
-  top: 10px;
+	top: 10px;
 }
 
 /* Toogler animation */
 
 #main-nav .wrapper .toggler:checked + .hamburger > div {
-  transform: rotate(135deg);
+	-webkit-transform: rotate(135deg);
+	-ms-transform: rotate(135deg);
+	transform: rotate(135deg);
 }
 
 #main-nav .wrapper .toggler:checked + .hamburger > div:before,
 #main-nav .wrapper .toggler:checked + .hamburger > div:after {
-  top: 0;
-  transform: rotate(90deg);
+	top: 0;
+	-webkit-transform: rotate(90deg);
+	-ms-transform: rotate(90deg);
+	transform: rotate(90deg);
 }
 
 /* rotate on hover */
 #main-nav .wrapper .toggler:checked:hover + .hamburger > div {
-  transform: rotate(225deg);
+	-webkit-transform: rotate(225deg);
+	-ms-transform: rotate(225deg);
+	transform: rotate(225deg);
 }
 
 #main-nav .wrapper .toggler:checked ~ .menu {
-  visibility: visible;
+	visibility: visible;
+	background: var(--secoundry-color-trans);
 }
 
 #main-nav .wrapper .toggler:checked ~ .menu > div {
-  transform: scale(1);
-  transition-duration: var(--menu-speed);
+	-webkit-transform: scale(1);
+	-ms-transform: scale(1);
+	transform: scale(1);
+	-webkit-transition-duration: var(--menu-speed);
+	-o-transition-duration: var(--menu-speed);
+	transition-duration: var(--menu-speed);
 }
 
 #main-nav .wrapper .toggler:checked ~ .menu > div > div {
-  opacity: 1;
-  transition: opacity 0.4s ease 0.4s;
+	opacity: 1;
+	-webkit-transition: opacity 0.4s ease 0.4s;
+	-o-transition: opacity 0.4s ease 0.4s;
+	transition: opacity 0.4s ease 0.4s;
 }
 
 #main-nav .wrapper .menu {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  visibility: hidden;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	visibility: hidden;
 }
 
 #main-nav .wrapper .menu > div {
-  background: rgb(48, 116, 182, 0.9);
-  width: 200vw;
-  height: 300vw;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  flex: none;
+	background: rgb(48, 116, 182, 0.9);
+	width: 200vw;
+	height: 300vw;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	border-radius: 50%;
+	-webkit-box-flex: 0;
+	-ms-flex: none;
+	flex: none;
 }
 
 #main-nav .wrapper .menu > div > div {
-  text-align: center;
-  max-width: 90vw;
-  max-height: 100vh;
-  opacity: 0;
-  transition: opacity 0.4s ease;
+	text-align: center;
+	max-width: 90vw;
+	max-height: 100vh;
+	opacity: 0;
+	-webkit-transition: opacity 0.4s ease;
+	-o-transition: opacity 0.4s ease;
+	transition: opacity 0.4s ease;
 }
 
 #main-nav ul {
-  flex-direction: column;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
+	flex-direction: column;
 }
 
 #main-nav .wrapper .menu > div > div ul li {
-  list-style: none;
-  color: #fff;
-  font-size: 1.5rem;
-  padding: 1rem;
+	list-style: none;
+	color: #fff;
+	font-size: 1.5rem;
+	padding: 1rem;
 }
 
 #main-nav .wrapper .menu > div > div ul li a {
-  color: inherit;
-  text-decoration: none;
-  transition: color 0.4s ease;
+	color: inherit;
+	text-decoration: none;
+	-webkit-transition: color 0.4s ease;
+	-o-transition: color 0.4s ease;
+	transition: color 0.4s ease;
 }
 
 #main-nav .wrapper .menu > div > div ul li a:hover {
-  color: var(--secondry-color);
+	color: var(--secondry-color);
 }
 
 #main-nav ul li a.current {
-  background: none;
-  color: #fff;
+	background: none;
+	color: #fff;
 }
 
 #showcase,
@@ -158,17 +208,17 @@
 #quotes,
 #pricing-info,
 #contact-form {
-  padding-top: 50px;
+	padding-top: 50px;
 }
 
 .l-heading {
-  font-size: 2.5rem;
+	font-size: 2.5rem;
 }
 
 #showcase {
-  padding: 50px 0 0 0;
+	padding: 50px 0 0 0;
 }
 
 #main-nav ul li a:hover {
-  background: none;
+	background: none;
 }
